@@ -1,0 +1,181 @@
+.page-main {
+    position: relative;
+    top: -86px;
+    background-color: $main-color;
+    @include bg-img("../img/background-header-desktop@1x.png");
+    background-position: 50% 0;
+
+    @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/background-header-desktop@2x.png");
+        background-size: 1920px auto;
+    }
+
+    &__wrapper {
+        position: relative;
+        @include container(1410px, 30px);
+        padding-bottom: 275px;
+    }
+
+    &__title {
+        @include pm-zero();
+        padding-top: 317px;
+        margin-bottom: 25px;
+        font-family: "Roboto Condensed", sans-serif;
+        @include font(80px, 700, 94px);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: $text-color;
+    }
+
+    &__description {
+        position: relative;
+        max-width: 683px;
+        @include pm-zero();
+        padding-left: 94px;
+        margin-bottom: 44px;
+        font-size: 22px;
+        line-height: 34px;
+        color: $text-color;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 18px;
+            left: 0;
+
+            width: 66px;
+            height: 2px;
+
+            background-color: $text-color;
+        }
+    }
+
+    &__button-link {
+        display: block;
+        @include button(407px, 55px);
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 94px;
+        padding-top: 17px; 
+        padding-bottom: 14px;
+        background-color: $button-color;
+        border-color: $button-color;
+    }
+
+    &__scroll {
+        display: inline-block;
+        position: absolute;
+
+        left: -8px;    
+        bottom: 127px;
+
+        font-size: 14px;
+        line-height: 16px;
+
+        opacity: 0.5;
+        transform: rotate(-90deg);
+    }
+}
+
+@media (max-width: $table-width) {
+    .page-main {
+        @include bg-img("../img/background-header-tablet@1x.png");
+        background-position: 50% calc(50% + 4px);
+
+        @media (min-resolution: $retina-dppx) {
+            background-image: url("../img/background-header-tablet@2x.png");
+            background-size: 1023px auto;
+        }
+
+        &__wrapper {
+            padding-bottom: 163px;
+        }
+
+        &__title {
+            max-width: 470px;
+            margin-left: 58px;
+            margin-bottom: 27px;
+            padding-top: 202px;
+            font-size: 60px;
+            line-height: 70px;
+        }
+
+        &__description {
+            max-width: 356px;
+            margin-left: 61px;
+            margin-bottom: 53px;
+            padding-left: 48px;
+            font-size: 18px;
+            line-height: 30px;
+
+            &::after {
+                width: 33px;
+            }
+        }
+
+        &__button-link {
+            width: 379px;
+            margin-left: 109px;
+        }
+
+        &__scroll {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .page-main {
+        @include bg-img("../img/background-header-mobile@1x.png");
+        background-position: calc(50% + 7px) 17px;
+
+        @media (min-resolution: $retina-dppx) {
+            background-image: url("../img/background-header-mobile@2x.png");
+            background-size: 767px auto;
+        }
+
+        &__wrapper {
+            padding-left: 17px;
+            padding-right: 17px;
+            padding-bottom: 64px;
+        }
+
+        &__title {
+            max-width: 360px;
+            margin: 0 auto;
+            margin-bottom: 23px;
+            padding-top: 318px;
+            font-size: 40px;
+            line-height: 47px;
+            letter-spacing: 2.5px;
+        }
+
+        &__description {
+            max-width: 312px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            padding-left: 48px;
+            font-size: 16px;
+            line-height: 26.5px;
+        }
+
+        &__button-link {
+            max-width: 287px;
+            margin: 0 auto;
+
+            &::after {
+                content: "Бесплатная консультация";
+
+                position: relative;
+                
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+
+            &--text {
+                display: none;
+            }
+        }
+    }
+}
