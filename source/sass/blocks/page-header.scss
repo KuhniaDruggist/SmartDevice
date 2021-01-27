@@ -1,9 +1,10 @@
 .page-header {
-    background-color: #1B2D37;
+    position: relative;
+    z-index: 1;
+
     &__wrapper {
         @include container(1410px, 30px);
-        // min-width: 1024px; 
-        padding-top: 38px;
+        padding-top: 33px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -15,10 +16,10 @@
     }
 
     &__button-callback {
-        box-sizing: border-box;
         display: inline-block;
         @include button();
-        padding: 15px 20px;
+        padding-top: 13px; 
+        padding-bottom: 14px;
     }
 }
 
