@@ -17,6 +17,7 @@
 }
 
 @mixin button($width: 180px, $min-height: 45px) {
+    box-sizing: border-box;
     width: $width;
     min-height: $min-height;
     padding-left: 20px;
