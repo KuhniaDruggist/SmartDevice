@@ -38,6 +38,10 @@
             .advantages__description {
                 color: $text-color;
             }
+
+            .advantages__icon {
+                fill: $text-color;
+            }
         }
     }
 
@@ -46,6 +50,8 @@
 
         top: 39px;
         left: 42px;
+
+        fill: $text-contrast;
 
         &--detective {
             top: 43px;
@@ -69,7 +75,7 @@
         padding-left: 42px;
         padding-bottom: 65px;
         padding-right: 42px;
-        color: $adv-text;
+        color: $description-text;
     }
 }
 
@@ -139,6 +145,7 @@
             padding-top: 37px;
             padding-left: 14px;
             padding-right: 16px;
+            padding-bottom: 20px;
         }
 
         &__item {
