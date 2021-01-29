@@ -1,0 +1,123 @@
+.ab-company {
+    background-color: $background-light;
+
+    &__wrapper {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 55px;
+
+        @include bg-img("../img/year2005-desktop@1x.png");
+        background-position: 32px 87px;
+
+        @media (min-resolution: $retina-dppx) {
+            background-image: url("../img/year2005-dektop@2x.png");
+            background-size: 115px auto;
+        }
+    }
+
+    &__title {
+        @include pm-zero();
+        margin-bottom: 24px;
+        padding-top: 75px;
+        padding-left: 179px;
+        font-family: "Roboto Condensed", sans-serif;
+        @include font(36px, 400, 51px);
+        color: $description-text;
+    }
+
+    &__description {
+        @include pm-zero();
+        padding-right: 3px;
+        padding-left: 179px;
+        padding-bottom: 18px;
+        color: $description-text;
+    }
+    
+    &__button {
+        display: block;
+        @include button();
+        margin-top: 17px;
+        margin-left: 179px;
+        padding-top: 17px; 
+        padding-bottom: 14px;
+        color: $button-color;
+        border-color: $button-color;
+    }
+}
+
+@media (max-width: $table-width) {
+    .ab-company {
+        &__wrapper {
+            @include bg-img("../img/year2005-tablet@1x.png");
+            background-position: 28px 33px;
+
+            @media (min-resolution: $retina-dppx) {
+                background-image: url("../img/year2005-tablet@2x.png");
+                background-size: 131px auto;
+            }
+        }
+
+        &__title {
+            padding-top: 26px;
+            padding-left: 180px;
+            font-size: 32px;
+            line-height: 45px;
+        }
+
+        &__description {
+            position: relative;
+            padding-left: 182px;
+            padding-right: 0;
+            padding-bottom: 20px;
+        }
+
+        &__visible:after {
+            content: '..';
+        }
+
+        &__hidden {
+            display: none;
+        }
+
+        &__button {
+            margin-top: 22px;
+            margin-left: 183px;
+            padding-top: 14px; 
+            padding-bottom: 13px;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .ab-company {
+        &__wrapper {
+            padding-left: 13px;
+            padding-right: 15px;
+            background-image: none;
+        }
+
+        &__title {
+            margin-bottom: 17px;
+            padding-top: 15px;
+            padding-left: 0;
+            font-size: 28px;
+        }
+
+        &__description {
+            padding-left: 3px;
+            padding-right: 0px;
+            padding-bottom: 40px;
+
+            &--short:after {
+                left: 137px;
+            }
+        }
+
+        &__button {
+            margin-top: -12px;
+            margin-left: 3px;
+        }
+    }
+}
