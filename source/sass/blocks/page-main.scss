@@ -1,6 +1,5 @@
 .page-main {
-    position: relative;
-    top: -86px;
+    margin-top: -86px;
     background-color: $background-dark;
     @include bg-img("../img/background-header-desktop@1x.png");
     background-position: 50% 0;
