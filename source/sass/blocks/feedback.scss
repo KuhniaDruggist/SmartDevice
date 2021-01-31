@@ -1,0 +1,89 @@
+.feedback {
+    padding-bottom: 112px;
+
+    @include bg-img("../img/paper-airplane@1x.png");
+    background-position: calc(25% - 118px) 94px;
+    background-color: $background-form;
+
+    @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/paper-airplane@2x.png");
+        background-size: 665px auto;
+    }
+
+    &__wrapper {
+        @include container(1170px, 30px);
+    }
+
+    &__title {
+        max-width: 544px;
+        @include pm-zero();
+        margin-right: 29px;
+        margin-left: auto;
+        padding-top: 91px;
+
+        font-family: "Roboto Condensed", sans-serif;
+        @include font(36px, 400, 51px);
+        color: $text-color;
+    }
+
+    &__description {
+        max-width: 318px;
+        margin-top: 10px;
+        margin-right: 252px;
+        margin-bottom: 50px;
+        margin-left: auto;
+
+        color: $text-color;
+    }
+}
+
+@media (max-width: $table-width) {
+    .feedback {
+        padding-bottom: 103px;
+        background-image: none;
+
+        &__wrapper {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        &__title {
+            margin-left: 63px;
+            padding-top: 80px;
+            font-size: 32px;
+            line-height: 45px;
+        }
+
+        &__description {
+            margin-top: 16px;
+            margin-bottom: 55px;
+            margin-left: 68px;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .feedback {
+        padding-bottom: 35px;
+
+        &__wrapper {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        &__title {
+            margin-left: 0;
+            padding-top: 28px;
+
+            font-size: 28px;
+            line-height: 40px;
+        }
+
+        &__description {
+            margin-top: 12px;
+            margin-right: 0;
+            margin-bottom: 26px;
+            margin-left: 0;
+        }
+    }
+}
