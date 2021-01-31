@@ -1,0 +1,57 @@
+.contacts-footer {
+    &__title {
+        @include pm-zero();
+        margin-top: 8px;
+        margin-bottom: 26px;
+
+        font-family: "Roboto Condensed", sans-serif;
+        @include font(15px, 400, 16px);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: $text-footer;
+    }
+
+    &__adres,
+    &__phones--link {
+        font-size: 15px;
+        line-height: 25px;
+        color: $text-footer; 
+        opacity: 0.5; 
+    }
+
+    &__adres {
+        @include pm-zero();
+        margin-bottom: 0;
+    }
+
+    &__phones {
+        @include pm-zero();
+        list-style: none;
+    }
+}
+
+@media (max-width: $table-width) {
+    .contacts-footer {
+        margin-top: 69px;
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .contacts-footer {
+        margin: 0;
+
+        &__title {
+            margin: 0;
+            padding-top: 29px;
+            padding-bottom: 31px;
+            padding-left: 15px;
+        }
+
+        &__adres,
+        &__phones--link {
+            padding-left: 15px;
+            padding-right: 20px;
+        }
+    }
+}
