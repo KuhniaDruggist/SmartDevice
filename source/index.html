@@ -235,7 +235,8 @@
           </li>
         </ul>
     
-        <nav class="page-footer__nav site-nav">
+        <nav class="page-footer__nav site-nav site-nav--close">
+          <button class="site-nav__button--toggle"><span class="visually-hidden">Показать разделы сыйта</span></button>
           <h2 class="site-nav__title">Разделы сайта</h2>
           <div class="site-nav__wrapper">
             <ul class="site-nav__list-column site-nav__list-column--one">
@@ -266,20 +267,23 @@
           </div>
         </nav>
     
-        <div class="page-footer__contacts contacts-footer">
+        <div class="page-footer__contacts contacts-footer contacts-footer--close">
+          <button class="contacts-footer__button--toggle"><span class="visually-hidden">Показать разделы сыйта</span></button>
           <h2 class="contacts-footer__title">Наш офис</h2>
+          <div class="contacts-footer__wrapper">
           <p class="contacts-footer__adres">г. Мытищи, Олимпийский проспект, д.10</p>
-          <ul class="contacts-footer__phones">
-            <li class="contacts-footer__phones--item">
-              <a class="contacts-footer__phones--link" href="tel:+74955894050">+7 (495) 589-40-50</a>
-            </li>
-            <li class="contacts-footer__phones--item">
-              <a class="contacts-footer__phones--link" href="tel:+79250038767">+7 (925) 003-87-67</a>
-            </li>
-            <li class="contacts-footer__phones--item">
-              <a class="contacts-footer__phones--link" href="tel:+792692608079">+7 (926) 926-080-79</a>
-            </li>
-          </ul>
+            <ul class="contacts-footer__phones">
+              <li class="contacts-footer__phones--item">
+                <a class="contacts-footer__phones--link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+              </li>
+              <li class="contacts-footer__phones--item">
+                <a class="contacts-footer__phones--link" href="tel:+79250038767">+7 (925) 003-87-67</a>
+              </li>
+              <li class="contacts-footer__phones--item">
+                <a class="contacts-footer__phones--link" href="tel:+792692608079">+7 (926) 926-080-79</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
   
@@ -293,5 +297,42 @@
       </div>
     </div>
   </footer>
+
+  <!--ПОПАП-->
+
+  <section class="popup popup--close">
+    <div class="popup__wrapper">
+      <button class="button popup__button"><span class="visually-hidden">Закрыть</span></button>
+      <h2 class="popup__title">Закажите звонок</h2>
+      <p class="popup__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+  
+      <form class="popup__form popup-form" action="https://echo.htmlacademy.ru" method="post">
+        <ul class="popup-form__list">
+          <li class="popup-form__item-info">
+            <label class="popup-form__label-info visually-hidden" for="name-field">Имя</label>
+            <input class="popup-form__field-info" id="name-field" type="text" name="name" placeholder="Имя" required>
+          </li>
+          <li class="popup-form__item-info">
+            <label class="popup-form__label-info visually-hidden" for="phone-field">Телефон</label>
+            <input class="popup-form__field-info" id="phone-field" type="tel" name="phone" placeholder="Телефон" required>
+          </li>
+          <li class="popup-form__item-info">
+            <label class="popup-form__label-info visually-hidden" for="question-field">Ваш вопрос</label>
+            <textarea class="popup-form__field-info popup-form__field-info--question" id="question-field" placeholder="Ваш вопрос"></textarea>
+          </li>
+        </ul>
+  
+        <div class="popup-form__wrapper">
+
+          <p class="popup-form__item-consent">
+            <label class="popup-form__label-consent" for="consent-popup">Я согласен на обработку персональных данных</label>
+            <input class="popup-form__field-consent visually-hidden" type="checkbox" name="personal consent to processing" id="consent-popup" required>
+          </p>
+          
+          <button class="button popup-form__button" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </section>
 </body>
 </html>
