@@ -28,6 +28,10 @@
         @include pm-zero();
         list-style: none;
     }
+
+    &__button--toggle {
+        display: none;
+    }
 }
 
 @media (max-width: $table-width) {
@@ -39,19 +43,63 @@
 
 @media (max-width: $mobile-width) {
     .contacts-footer {
+        position: relative;
         margin: 0;
+        border-bottom: 1px solid $footer-line;
 
         &__title {
             margin: 0;
-            padding-top: 29px;
-            padding-bottom: 31px;
+            padding-top: 30px;
+            padding-bottom: 26px;
             padding-left: 15px;
+        }
+
+        &__wrapper {
+            padding-bottom: 25px;
         }
 
         &__adres,
         &__phones--link {
             padding-left: 15px;
             padding-right: 20px;
+        }
+
+        &__adres {
+            margin-top: 5px;
+        }
+
+        &__button--toggle {
+            display: block;
+            position: absolute;
+
+            top: 15px;
+            right: 4px;
+
+            width: 45px;
+            height: 45px;
+
+            background: none;
+            border: none;
+        
+            cursor: pointer;
+        }
+    }
+
+    .contacts-footer--open .contacts-footer {   
+        &__button--toggle {
+            @include bg-img("../img/icon-minus.svg");
+            background-position: 50% 50%;
+        }
+    }
+
+    .contacts-footer--close .contacts-footer {
+        &__button--toggle {
+            @include bg-img("../img/icon-plus.svg");
+            background-position: 50% 50%;
+        }
+
+        &__wrapper {
+            display: none;
         }
     }
 }

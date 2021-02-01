@@ -5,7 +5,7 @@
         content: "";
 
         position: absolute;
-        bottom: 2%px;
+        bottom: 53px;
 
         width: 100%;
         height: 1px;
@@ -72,7 +72,7 @@
         }
 
         &::after {
-            bottom: 117px;
+            display: none;
         }
         
         &__main-wrapper {
@@ -89,6 +89,7 @@
             display: block;
 
             margin-top: 202px;
+            margin-bottom: 0;
         }
     }
 }

@@ -17,6 +17,10 @@
         display: flex;
     }
 
+    &__button--toggle {
+        display: none;
+    }
+
     &__list-column {
         @include pm-zero();
         list-style: none;
@@ -56,12 +60,50 @@
             padding-left: 15px;
 
             border-top: 1px solid $footer-line;
+        }
+
+        &__wrapper {
+            padding-left: 15px;
+            padding-bottom: 25px;
+
             border-bottom: 1px solid $footer-line;
+        }
+
+        &__button--toggle {
+            display: block;
+            position: absolute;
+
+            top: 15px;
+            right: 4px;
+
+            width: 45px;
+            height: 45px;
+            background: none;
+            border: none;
+            
+            cursor: pointer;
+        }
+    }
+
+    .site-nav--open .site-nav { 
+        &__button--toggle {
+            @include bg-img("../img/icon-minus.svg");
+            background-position: 50% 50%;
+        }
+    }
+
+    .site-nav--close .site-nav {   
+        &__title {
+            border-bottom: 1px solid $footer-line;
+        }
+
+        &__button--toggle {
+            @include bg-img("../img/icon-plus.svg");
+            background-position: 50% 50%;
         }
 
         &__wrapper {
             display: none;
-            padding-left: 15px;
         }
     }
 }

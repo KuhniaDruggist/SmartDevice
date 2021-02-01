@@ -87,7 +87,7 @@
 
     &__field-consent:checked ~ &__label-consent::before {
         @include bg-img("../img/icon-checked.svg");
-        border: none;
+        background-position: 2px;
     }
      
     &__button {
