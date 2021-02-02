@@ -1,4 +1,6 @@
 .popup {
+    display: none;
+
     position: absolute;
     z-index: 2;
     top: 0;
@@ -52,10 +54,6 @@
         margin-bottom: 32px;
         
         color: $text-color;
-    }
-
-    &--close {
-        display: none;
     }
 
     &--open {
