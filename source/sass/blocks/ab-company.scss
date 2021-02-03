@@ -1,5 +1,5 @@
 .ab-company {
-    background-color: $background-light;
+    background: transparent;
     padding-bottom: 54px;
 
     &__wrapper {
@@ -94,7 +94,7 @@
 
 @media (max-width: $mobile-width) {
     .ab-company {
-        padding-bottom: 10px;
+        padding-bottom: 12px;
         &__wrapper {
             padding-left: 13px;
             padding-right: 15px;
@@ -103,7 +103,7 @@
 
         &__title {
             margin-bottom: 17px;
-            padding-top: 15px;
+            padding-top: 10px;
             padding-left: 0;
             font-size: 28px;
         }

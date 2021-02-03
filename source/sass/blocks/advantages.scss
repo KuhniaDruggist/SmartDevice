@@ -1,7 +1,5 @@
 .advantages {
-    background-color: $background-light;
-    @include bg-img("../img/icon-triangles-company.svg");
-    background-position: 92% -29px;
+    background: transparent;
 
     &__list {
         display: flex;
@@ -81,8 +79,6 @@
 
 @media (max-width: $table-width) {
     .advantages {
-        background-position: 43.76% -86px;
-
         &__list {
             padding-top: 54px;
             padding-left: 25px;
@@ -138,8 +134,6 @@
 
 @media (max-width: $mobile-width) {
     .advantages {
-        background-position: 50.7% -386%;
-
         &__list {
             display: block;
             padding-top: 37px;
@@ -164,6 +158,10 @@
             padding-left: 25px;
             padding-right: 13px;
             padding-bottom: 23px;
+
+            &--suppliers {
+                padding-right: 12px;
+            }
         }
     }
 }

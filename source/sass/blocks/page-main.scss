@@ -75,6 +75,12 @@
         opacity: 0.5;
         transform: rotate(-90deg);
     }
+
+    &__background-wrapper {
+        background-color: $background-light;
+        @include bg-img("../img/icon-triangles-desktop.svg");
+        background-position: 90% 34%;
+    }
 }
 
 @media (max-width: $table-width) {
@@ -120,6 +126,11 @@
 
         &__scroll {
             display: none;
+        }
+
+        &__background-wrapper {
+            @include bg-img("../img/icon-triangles-tablet.svg");
+            background-position: 100% 37%;
         }
     }
 }
@@ -175,6 +186,10 @@
             &--text {
                 display: none;
             }
+        }
+
+        &__background-wrapper {
+            background-position: 50% 70%;
         }
     }
 }
