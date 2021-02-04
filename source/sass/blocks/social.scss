@@ -1,28 +1,29 @@
 .social {
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
 
-    position: relative;
-    top: 55px;
+  position: relative;
+  top: 55px;
 
-    width: 112px;
-    @include pm-zero();
+  width: 112px;
 
-    list-style: none;
+  @include pm-zero();
+
+  list-style: none;
 }
 
 @media (max-width: $table-width) {
-    .social {
-        position: absolute;
-        top: -28px;
-        right: 0;
-    }
+  .social {
+    position: absolute;
+    top: -28px;
+    right: 0;
+  }
 }
 
 @media (max-width: $mobile-width) {
-    .social {
-        top: -80px;
-        right: 105px;
-    }
+  .social {
+    top: -80px;
+    right: 105px;
+  }
 }

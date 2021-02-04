@@ -1,105 +1,106 @@
 .contacts-footer {
-    &__title {
-        @include pm-zero();
-        margin-top: 8px;
-        margin-bottom: 26px;
+  &__title {
+    @include pm-zero();
+    margin-top: 8px;
+    margin-bottom: 26px;
 
-        font-family: "Roboto Condensed", sans-serif;
-        @include font(15px, 400, 16px);
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        color: $text-footer;
-    }
+    font-family: "Roboto Condensed", sans-serif;
 
-    &__adres,
-    &__phones--link {
-        font-size: 15px;
-        line-height: 25px;
-        color: $text-footer; 
-        opacity: 0.5; 
-    }
+    @include font(15px, 400, 16px);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: $text-footer;
+  }
 
-    &__adres {
-        @include pm-zero();
-        margin-bottom: 0;
-    }
+  &__adres,
+  &__phones-link {
+    font-size: 15px;
+    line-height: 25px;
+    color: $text-footer;
+    opacity: 0.5;
+  }
 
-    &__phones {
-        @include pm-zero();
-        list-style: none;
-    }
+  &__adres {
+    @include pm-zero();
+    margin-bottom: 0;
+  }
 
-    &__button--toggle {
-        display: none;
-    }
+  &__phones {
+    @include pm-zero();
+    list-style: none;
+  }
+
+  &__button-toggle {
+    display: none;
+  }
 }
 
 @media (max-width: $table-width) {
-    .contacts-footer {
-        margin-top: 69px;
-        margin-right: 12px;
-    }
+  .contacts-footer {
+    margin-top: 69px;
+    margin-right: 12px;
+  }
 }
 
 @media (max-width: $mobile-width) {
-    .contacts-footer {
-        position: relative;
-        margin: 0;
-        border-bottom: 1px solid $footer-line;
+  .contacts-footer {
+    position: relative;
+    margin: 0;
+    border-bottom: 1px solid $footer-line;
 
-        &__title {
-            margin: 0;
-            padding-top: 30px;
-            padding-bottom: 26px;
-            padding-left: 15px;
-        }
-
-        &__wrapper {
-            padding-bottom: 25px;
-        }
-
-        &__adres,
-        &__phones--link {
-            padding-left: 15px;
-            padding-right: 20px;
-        }
-
-        &__adres {
-            margin-top: 5px;
-        }
-
-        &__button--toggle {
-            display: block;
-            position: absolute;
-
-            top: 15px;
-            right: 4px;
-
-            width: 45px;
-            height: 45px;
-
-            background: none;
-            border: none;
-        
-            cursor: pointer;
-        }
+    &__title {
+      margin: 0;
+      padding-top: 30px;
+      padding-bottom: 26px;
+      padding-left: 15px;
     }
 
-    .contacts-footer--open .contacts-footer {   
-        &__button--toggle {
-            @include bg-img("../img/icon-minus.svg");
-            background-position: 50% 50%;
-        }
+    &__wrapper {
+      padding-bottom: 25px;
     }
 
-    .contacts-footer--close .contacts-footer {
-        &__button--toggle {
-            @include bg-img("../img/icon-plus.svg");
-            background-position: 50% 50%;
-        }
-
-        &__wrapper {
-            display: none;
-        }
+    &__adres,
+    &__phones-link {
+      padding-left: 15px;
+      padding-right: 20px;
     }
+
+    &__adres {
+      margin-top: 5px;
+    }
+
+    &__button-toggle {
+      display: block;
+      position: absolute;
+
+      top: 15px;
+      right: 4px;
+
+      width: 45px;
+      height: 45px;
+
+      background: none;
+      border: none;
+
+      cursor: pointer;
+    }
+  }
+
+  .contacts-footer--open .contacts-footer {
+    &__button-toggle {
+      @include bg-img("../img/icon-minus.svg");
+      background-position: 50% 50%;
+    }
+  }
+
+  .contacts-footer--close .contacts-footer {
+    &__button-toggle {
+      @include bg-img("../img/icon-plus.svg");
+      background-position: 50% 50%;
+    }
+
+    &__wrapper {
+      display: none;
+    }
+  }
 }

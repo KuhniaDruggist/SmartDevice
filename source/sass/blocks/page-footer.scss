@@ -1,95 +1,95 @@
 .page-footer {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 53px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $footer-line;
+  }
+
+  &__main-wrapper {
+    @include container(1410px, 30px);
+  }
+
+  &__logo {
     position: relative;
+    top: 67px;
+  }
 
-    &::after {
-        content: "";
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
 
-        position: absolute;
-        bottom: 53px;
-
-        width: 100%;
-        height: 1px;
-
-        background-color: $footer-line;
-    }
-
-    &__main-wrapper {
-        @include container(1410px, 30px);
-    }
-
-    &__logo {
-        position: relative;
-        top: 67px;
-    }
-
-    &__content-wrapper {
-        display: flex;
-        justify-content: space-between;
-
-        margin-bottom: 58px;
-    }
+    margin-bottom: 58px;
+  }
 }
 
 @media (max-width: $table-width) {
-    .page-footer {
-        &::after {
-            bottom: 66px;
-        }
-
-        &::before {
-            content: "";
-    
-            position: absolute;
-            top: 96px;
-    
-            width: 100%;
-            height: 1px;
-    
-            background-color: $footer-line;
-        }
-
-        &__main-wrapper {
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-
-        &__logo {
-            top: 19px;
-        }
-
-        &__content-wrapper {
-            position: relative;
-
-            margin-bottom: 36px;
-        }
+  .page-footer {
+    &::after {
+      bottom: 66px;
     }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 96px;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $footer-line;
+    }
+
+    &__main-wrapper {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    &__logo {
+      top: 19px;
+    }
+
+    &__content-wrapper {
+      position: relative;
+
+      margin-bottom: 36px;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
-    .page-footer {
-        &::before {
-            display: none;
-        }
-
-        &::after {
-            display: none;
-        }
-        
-        &__main-wrapper {
-            padding-right: 0;
-            padding-left: 0;
-        }
-
-        &__logo {
-            top: 46px;
-            left: 50px;
-        }
-
-        &__content-wrapper {
-            display: block;
-
-            margin-top: 202px;
-            margin-bottom: 0;
-        }
+  .page-footer {
+    &::before {
+      display: none;
     }
+
+    &::after {
+      display: none;
+    }
+
+    &__main-wrapper {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &__logo {
+      top: 46px;
+      left: 50px;
+    }
+
+    &__content-wrapper {
+      display: block;
+
+      margin-top: 202px;
+      margin-bottom: 0;
+    }
+  }
 }

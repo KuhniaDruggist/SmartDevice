@@ -1,167 +1,169 @@
 .advantages {
-    background: transparent;
+  background: transparent;
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1170px;
-        @include pm-zero();
-        margin: 0 auto;
-        padding-top: 112px;
-        padding-left: 30px;
-        padding-right: 30px;
-        list-style: none;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1170px;
+
+    @include pm-zero();
+    margin: 0 auto;
+    padding-top: 112px;
+    padding-left: 30px;
+    padding-right: 30px;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid $adv-border;
+    border-left: 3px solid $adv-border-contrast;
+    width: calc(50% - 15px);
+    margin-bottom: 30px;
+    background-color: $background-light;
+
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
     }
 
-    &__item {
-        position: relative;
-        box-sizing: border-box;
-        border: 1px solid $adv-border;
-        border-left: 3px solid $adv-border-contrast;
-        width: calc(50% - 15px);
-        margin-bottom: 30px;
-        background-color: $background-light;
-        
-        &:not(:nth-child(2n)) {
-            margin-right: 30px;
-        }
+    &:hover {
+      cursor: pointer;
 
-        &:hover {
-            cursor: pointer;
+      background-color: $avd-backround;
+      border-color: $adv-border-contrast;
 
-            background-color: $avd-backround;
-            border-color: $adv-border-contrast;
+      .advantages__name,
+      .advantages__description {
+        color: $text-color;
+      }
 
-            .advantages__name,
-            .advantages__description {
-                color: $text-color;
-            }
-
-            .advantages__icon {
-                fill: $text-color;
-            }
-        }
+      .advantages__icon {
+        fill: $text-color;
+      }
     }
+  }
 
-    &__icon {
-        position: absolute;
+  &__icon {
+    position: absolute;
 
-        top: 39px;
-        left: 42px;
+    top: 39px;
+    left: 42px;
 
-        fill: $text-contrast;
+    fill: $text-contrast;
 
-        &--detective {
-            top: 43px;
-        }
+    &--detective {
+      top: 43px;
     }
+  }
 
-    &__name {
-        @include pm-zero();
-        margin-top: 94px;
-        margin-bottom: 16px;
-        padding-left: 42px;
-        font-family: "Roboto Condensed", sans-serif;
-        @include font(24px, 400, 34px);
-        color: $text-contrast;
-    }
+  &__name {
+    @include pm-zero();
+    margin-top: 94px;
+    margin-bottom: 16px;
+    padding-left: 42px;
+    font-family: "Roboto Condensed", sans-serif;
 
-    &__description {
-        max-width: 482px;
-        min-height: 88px;
-        @include pm-zero();
-        padding-left: 42px;
-        padding-bottom: 65px;
-        padding-right: 42px;
-        color: $description-text;
-    }
+    @include font(24px, 400, 34px);
+    color: $text-contrast;
+  }
+
+  &__description {
+    max-width: 482px;
+    min-height: 88px;
+
+    @include pm-zero();
+    padding-left: 42px;
+    padding-bottom: 65px;
+    padding-right: 42px;
+    color: $main-text;
+  }
 }
 
 @media (max-width: $table-width) {
-    .advantages {
-        &__list {
-            padding-top: 54px;
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-
-        &__item {
-            border-left: 2px solid $adv-border-contrast;
-        }
-
-        &__icon {
-
-            top: 23px;
-            left: 25px;
-
-            &--stopwatch {
-                width: 29.38px;
-                height: 36px;
-            }
-
-            &--hired {
-                width: 31.72px;
-                height: 32px;
-            }
-    
-            &--detective {
-                width: 30.31px;
-                height: 26px;
-                
-                top: 26px;
-            }
-
-            &--tag {
-                width: 32.18px;
-                height: 32px;
-            }
-        }
-
-        &__name {
-            margin-top: 66px;
-            margin-bottom: 9px;
-            padding-left: 24px;
-        }
-
-        &__description {
-            min-height: 102px;
-            padding-left: 24px;
-            padding-bottom: 19px;
-            padding-right: 24px;
-        }
+  .advantages {
+    &__list {
+      padding-top: 54px;
+      padding-left: 25px;
+      padding-right: 25px;
     }
+
+    &__item {
+      border-left: 2px solid $adv-border-contrast;
+    }
+
+    &__icon {
+      top: 23px;
+      left: 25px;
+
+      &--stopwatch {
+        width: 29.38px;
+        height: 36px;
+      }
+
+      &--hired {
+        width: 31.72px;
+        height: 32px;
+      }
+
+      &--detective {
+        width: 30.31px;
+        height: 26px;
+
+        top: 26px;
+      }
+
+      &--tag {
+        width: 32.18px;
+        height: 32px;
+      }
+    }
+
+    &__name {
+      margin-top: 66px;
+      margin-bottom: 9px;
+      padding-left: 24px;
+    }
+
+    &__description {
+      min-height: 102px;
+      padding-left: 24px;
+      padding-bottom: 19px;
+      padding-right: 24px;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
-    .advantages {
-        &__list {
-            display: block;
-            padding-top: 37px;
-            padding-left: 14px;
-            padding-right: 16px;
-            padding-bottom: 20px;
-        }
-
-        &__item {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        &__name {
-            margin-top: 69px;
-            margin-bottom: 6px;
-            padding-left: 25px;
-            font-size: 20px;
-        }
-
-        &__description {
-            padding-left: 25px;
-            padding-right: 13px;
-            padding-bottom: 23px;
-
-            &--suppliers {
-                padding-right: 12px;
-            }
-        }
+  .advantages {
+    &__list {
+      display: block;
+      padding-top: 37px;
+      padding-left: 14px;
+      padding-right: 16px;
+      padding-bottom: 20px;
     }
+
+    &__item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__name {
+      margin-top: 69px;
+      margin-bottom: 6px;
+      padding-left: 25px;
+      font-size: 20px;
+    }
+
+    &__description {
+      padding-left: 25px;
+      padding-right: 13px;
+      padding-bottom: 23px;
+
+      &--suppliers {
+        padding-right: 12px;
+      }
+    }
+  }
 }

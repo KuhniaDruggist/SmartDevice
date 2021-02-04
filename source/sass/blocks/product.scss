@@ -1,72 +1,72 @@
 .product {
-    @include container(1170px, 30px);
+  @include container(1170px, 30px);
 
-    &__title {
-        @include pm-zero();
-        margin-top: 87px;
-        margin-bottom: 52px;
+  &__title {
+    @include pm-zero();
+    margin-top: 87px;
+    margin-bottom: 52px;
 
-        font-family: "Roboto Condensed", sans-serif;
-        @include font(36px, 400, 51px);
-        color: $text-color;
+    font-family: "Roboto Condensed", sans-serif;
 
-    }
+    @include font(36px, 400, 51px);
+    color: $text-color;
+  }
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-        @include pm-zero();
-        padding-bottom: 122px;
+    @include pm-zero();
+    padding-bottom: 122px;
 
-        list-style: none;
-    }
+    list-style: none;
+  }
 }
 
 @media (max-width: $table-width) {
-    .product {
-        padding-left: 25px;
-        padding-right: 25px;
-       
-        &__title {
-            max-width: 85%;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            
-            font-size: 32px;
-            line-height: 45px;
-        }
+  .product {
+    padding-left: 25px;
+    padding-right: 25px;
 
-        &__list {
-            flex-direction: column;
+    &__title {
+      max-width: 85%;
+      margin-top: 50px;
+      margin-bottom: 50px;
 
-            padding-bottom: 35px;
-        }
-
-        &__item {
-            margin-bottom: 37px;
-        }
+      font-size: 32px;
+      line-height: 45px;
     }
+
+    &__list {
+      flex-direction: column;
+
+      padding-bottom: 35px;
+    }
+
+    &__item {
+      margin-bottom: 37px;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
-    .product {
-        padding-left: 15px;
-        padding-right: 15px;
+  .product {
+    padding-left: 15px;
+    padding-right: 15px;
 
-        &__title {
-            max-width: 100%;
-            margin-top: 48px;
-            margin-bottom: 41px;
-            margin-left: 10px;
+    &__title {
+      max-width: 100%;
+      margin-top: 48px;
+      margin-bottom: 41px;
+      margin-left: 10px;
 
-            font-size: 28px;
-            line-height: 40px;
-        }
-
-        &__item {
-            margin-bottom: 24px;
-        }
+      font-size: 28px;
+      line-height: 40px;
     }
+
+    &__item {
+      margin-bottom: 24px;
+    }
+  }
 }

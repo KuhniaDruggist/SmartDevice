@@ -1,109 +1,110 @@
 .site-nav {
-    margin-left: 76px;
+  margin-left: 76px;
 
-    &__title {
-        @include pm-zero();
-        margin-top: 8px;
-        margin-bottom: 26px;
+  &__title {
+    @include pm-zero();
+    margin-top: 8px;
+    margin-bottom: 26px;
 
-        font-family: "Roboto Condensed", sans-serif;
-        @include font(15px, 400, 16px);
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
-        color: $text-footer;
+    font-family: "Roboto Condensed", sans-serif;
+
+    @include font(15px, 400, 16px);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: $text-footer;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__button-toggle {
+    display: none;
+  }
+
+  &__list-column {
+    @include pm-zero();
+    list-style: none;
+
+    &--one {
+      margin-right: 72px;
     }
+  }
 
-    &__wrapper {
-        display: flex;
-    }
-
-    &__button--toggle {
-        display: none;
-    }
-
-    &__list-column {
-        @include pm-zero();
-        list-style: none;
-
-        &--one {
-            margin-right: 72px;
-        }
-    }
-
-    &__link {
-        font-size: 15px;
-        line-height: 25px;
-        color: $text-footer; 
-        opacity: 0.5; 
-    }
+  &__link {
+    font-size: 15px;
+    line-height: 25px;
+    color: $text-footer;
+    opacity: 0.5;
+  }
 }
 
 @media (max-width: $table-width) {
-    .site-nav {
-        margin-top: 69px;
-        margin-left: 0;
+  .site-nav {
+    margin-top: 69px;
+    margin-left: 0;
 
-        &__wrapper {
-            display: block;
-        }
+    &__wrapper {
+      display: block;
     }
+  }
 }
 
 @media (max-width: $mobile-width) {
-    .site-nav {
-        margin-top: 0;
+  .site-nav {
+    margin-top: 0;
 
-        &__title {
-            margin: 0;  
-            padding-top: 30px;
-            padding-bottom: 26px;
-            padding-left: 15px;
+    &__title {
+      margin: 0;
+      padding-top: 30px;
+      padding-bottom: 26px;
+      padding-left: 15px;
 
-            border-top: 1px solid $footer-line;
-        }
-
-        &__wrapper {
-            padding-left: 15px;
-            padding-bottom: 25px;
-
-            border-bottom: 1px solid $footer-line;
-        }
-
-        &__button--toggle {
-            display: block;
-            position: absolute;
-
-            top: 15px;
-            right: 4px;
-
-            width: 45px;
-            height: 45px;
-            background: none;
-            border: none;
-            
-            cursor: pointer;
-        }
+      border-top: 1px solid $footer-line;
     }
 
-    .site-nav--open .site-nav { 
-        &__button--toggle {
-            @include bg-img("../img/icon-minus.svg");
-            background-position: 50% 50%;
-        }
+    &__wrapper {
+      padding-left: 15px;
+      padding-bottom: 25px;
+
+      border-bottom: 1px solid $footer-line;
     }
 
-    .site-nav--close .site-nav {   
-        &__title {
-            border-bottom: 1px solid $footer-line;
-        }
+    &__button-toggle {
+      display: block;
+      position: absolute;
 
-        &__button--toggle {
-            @include bg-img("../img/icon-plus.svg");
-            background-position: 50% 50%;
-        }
+      top: 15px;
+      right: 4px;
 
-        &__wrapper {
-            display: none;
-        }
+      width: 45px;
+      height: 45px;
+      background: none;
+      border: none;
+
+      cursor: pointer;
     }
+  }
+
+  .site-nav--open .site-nav {
+    &__button-toggle {
+      @include bg-img("../img/icon-minus.svg");
+      background-position: 50% 50%;
+    }
+  }
+
+  .site-nav--close .site-nav {
+    &__title {
+      border-bottom: 1px solid $footer-line;
+    }
+
+    &__button-toggle {
+      @include bg-img("../img/icon-plus.svg");
+      background-position: 50% 50%;
+    }
+
+    &__wrapper {
+      display: none;
+    }
+  }
 }

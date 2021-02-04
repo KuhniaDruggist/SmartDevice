@@ -1,53 +1,54 @@
 .page-header {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    &__wrapper {
-        @include container(1410px, 30px);
-        padding-top: 33px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  &__wrapper {
+    @include container(1410px, 30px);
+    padding-top: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &__logo {
-        width: 202px;
-        height: 52px;
-    }
+  &__logo {
+    width: 202px;
+    height: 52px;
+  }
 
-    &__button-callback {
-        display: inline-block;
-        @include button();
-        padding-top: 13px; 
-        padding-bottom: 14px;
-    }
+  &__button-callback {
+    display: inline-block;
+
+    @include button();
+    padding-top: 13px;
+    padding-bottom: 14px;
+  }
 }
 
 @media (max-width: $table-width) {
-    .page-header {
-        &__wrapper {
-            padding-top: 20px;
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-
-        &__button-callback {
-            display: none;
-        }
+  .page-header {
+    &__wrapper {
+      padding-top: 20px;
+      padding-left: 25px;
+      padding-right: 25px;
     }
+
+    &__button-callback {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
-    .page-header {
-        &__wrapper {
-            padding-top: 17px;
-            padding-left: 17px;
-            padding-right: 17px;
-        }
-
-        &__logo {
-            width: 38px;
-            height: 38px; 
-        }
+  .page-header {
+    &__wrapper {
+      padding-top: 17px;
+      padding-left: 17px;
+      padding-right: 17px;
     }
+
+    &__logo {
+      width: 38px;
+      height: 38px;
+    }
+  }
 }
