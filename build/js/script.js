@@ -67,9 +67,9 @@ popup.addEventListener('click', function (evt) {
 });
 
 var navigation = document.querySelector('.site-nav');
-var navigationToggle = navigation.querySelector('.site-nav__button--toggle');
+var navigationToggle = navigation.querySelector('.site-nav__button-toggle');
 var contacts = document.querySelector('.contacts-footer');
-var contactsToggle = contacts.querySelector('.contacts-footer__button--toggle');
+var contactsToggle = contacts.querySelector('.contacts-footer__button-toggle');
 
 navigation.classList.add('site-nav--close');
 contacts.classList.add('contacts-footer--close');
