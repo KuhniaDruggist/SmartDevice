@@ -21,7 +21,7 @@
     @include pm-zero();
     padding-top: 317px;
     margin-bottom: 25px;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
 
     @include font(80px, 700, 94px);
     letter-spacing: 5px;

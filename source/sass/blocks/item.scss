@@ -30,7 +30,7 @@
     max-width: 160px;
 
     @include pm-zero();
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
 
     @include font(20px, 400, 30px);
   }
