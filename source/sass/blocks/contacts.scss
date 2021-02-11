@@ -6,16 +6,32 @@
   display: flex;
   justify-content: space-between;
 
+  &__item {
+    margin-left: 87px;
+  }
+
   &__link {
     position: relative;
-    padding-left: 122px;
+    padding-left: 33px;
+
+    &--mail {
+      padding-left: 39px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &__icon--mail {
     position: absolute;
 
     top: 2px;
-    left: 83px;
+    left: 0;
 
     width: 19px;
     height: 14px;
@@ -25,7 +41,7 @@
     position: absolute;
 
     top: 0;
-    left: 88px;
+    left: 0;
 
     width: 18px;
     height: 18px;
