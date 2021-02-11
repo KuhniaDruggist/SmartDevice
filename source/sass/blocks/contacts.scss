@@ -1,13 +1,24 @@
 .contacts {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  max-width: 499px;
+
   @include pm-zero();
   margin-right: 50px;
   margin-left: auto;
+
   list-style: none;
-  display: flex;
-  justify-content: space-between;
 
   &__item {
-    margin-left: 87px;
+    width: 206px;
+    margin-left: 18px;
+    margin-top: 14px;
+
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
   }
 
   &__link {
@@ -51,16 +62,20 @@
 @media (max-width: $table-width) {
   .contacts {
     margin-right: 0;
-    justify-content: flex-end;
 
     &__name {
       display: none;
     }
 
     &__item {
-      margin-left: 31px;
       width: 26px;
       height: 26px;
+      margin-top: 13px;
+      margin-left: 31px;
+
+      &:nth-child(odd) {
+        margin-left: 31px;
+      }
     }
 
     &__link {
@@ -87,8 +102,15 @@
 
 @media (max-width: $mobile-width) {
   .contacts {
+    max-width: 230px;
+
     &__item {
+      margin-top: 6px;
       margin-left: 19px;
+
+      &:nth-child(odd) {
+        margin-left: 19px;
+      }
     }
 
     &__icon--phone {
