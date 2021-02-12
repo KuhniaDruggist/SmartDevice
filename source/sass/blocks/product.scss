@@ -3,8 +3,8 @@
 
   &__title {
     @include pm-zero();
-    margin-top: 87px;
-    margin-bottom: 52px;
+    margin-top: 89px;
+    margin-bottom: 51px;
 
     font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
 
@@ -18,7 +18,7 @@
     justify-content: space-between;
 
     @include pm-zero();
-    padding-bottom: 122px;
+    padding-bottom: 129px;
 
     list-style: none;
   }
@@ -32,7 +32,7 @@
     &__title {
       max-width: 85%;
       margin-top: 50px;
-      margin-bottom: 50px;
+      margin-bottom: 49px;
 
       font-size: 32px;
       line-height: 45px;
@@ -41,11 +41,11 @@
     &__list {
       flex-direction: column;
 
-      padding-bottom: 35px;
+      padding-bottom: 36px;
     }
 
     &__item {
-      margin-bottom: 37px;
+      margin-bottom: 43px;
     }
   }
 }
@@ -66,7 +66,7 @@
     }
 
     &__item {
-      margin-bottom: 24px;
+      margin-bottom: 29px;
     }
   }
 }

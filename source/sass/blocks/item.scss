@@ -8,7 +8,7 @@
 
       position: absolute;
 
-      bottom: 6px;
+      bottom: 0;
       right: 0;
 
       width: 63px;
@@ -18,6 +18,33 @@
 
       @include bg-img("../img/icon-right-arrow.svg");
       background-position: 50% 50%;
+    }
+
+    &:hover,
+    &:focus {
+      color: $hover-light;
+    }
+
+    &:hover img,
+    &:focus img {
+      box-shadow: 0 0 0 1px $hover-light;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      background-color: $hover-light;
+    }
+
+    &:active {
+      color: $active-dark;
+    }
+
+    &:active img {
+      box-shadow: 0 0 0 1px $active-dark;
+    }
+
+    &:active::before {
+      background-color: $active-dark;
     }
   }
 
@@ -34,20 +61,18 @@
 
     @include font(20px, 400, 30px);
   }
+
+  & img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: $table-width) {
   .item {
     width: 100%;
-
-    &__image-box {
-      width: 100%;
-    }
-
-    & img {
-      width: 100%;
-      height: auto;
-    }
 
     &__title {
       top: 40px;
@@ -66,6 +91,11 @@
 
       font-size: 20px;
       line-height: 30px;
+
+      &--accessories {
+        top: 31px;
+        left: 35px;
+      }
     }
   }
 }

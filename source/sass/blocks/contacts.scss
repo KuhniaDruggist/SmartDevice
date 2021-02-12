@@ -29,12 +29,13 @@
       padding-left: 39px;
     }
 
-    &:hover {
-      opacity: 0.5;
+    &:hover,
+    &:focus {
+      opacity: 0.7;
     }
 
     &:active {
-      opacity: 0.3;
+      opacity: 0.5;
     }
   }
 

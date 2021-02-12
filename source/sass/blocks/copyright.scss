@@ -22,7 +22,7 @@
     }
 
     &--second {
-      margin-right: 158px;
+      margin-right: 133px;
     }
 
     &--third {
@@ -32,6 +32,15 @@
 
   &__link {
     opacity: 1;
+
+    &:hover,
+    &:focus {
+      color: $hover-light;
+    }
+
+    &:active {
+      color: $active-dark;
+    }
   }
 }
 

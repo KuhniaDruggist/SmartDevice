@@ -11,6 +11,19 @@
   @include pm-zero();
 
   list-style: none;
+
+  &__link svg {
+    fill: $social-icon-fill;
+  }
+
+  &__link:hover svg,
+  &__link:focus svg {
+    fill: $hover-light;
+  }
+
+  &__link:active svg {
+    fill: $active-dark;
+  }
 }
 
 @media (max-width: $table-width) {

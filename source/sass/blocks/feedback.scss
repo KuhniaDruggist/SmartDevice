@@ -1,5 +1,5 @@
 .feedback {
-  padding-bottom: 112px;
+  padding-bottom: 110px;
 
   @include bg-img("../img/paper-airplane@1x.png");
   background-position: calc(25% - 118px) 94px;
@@ -66,7 +66,7 @@
 
 @media (max-width: $mobile-width) {
   .feedback {
-    padding-bottom: 35px;
+    padding-bottom: 36px;
 
     &__wrapper {
       padding-left: 15px;

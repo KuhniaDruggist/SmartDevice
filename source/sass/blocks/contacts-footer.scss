@@ -20,6 +20,18 @@
     opacity: 0.5;
   }
 
+  &__phones-link {
+    &:hover,
+    &:focus {
+      opacity: 1;
+      color: $hover-light;
+    }
+
+    &:active {
+      color: $active-dark;
+    }
+  }
+
   &__adres {
     @include pm-zero();
     margin-bottom: 0;

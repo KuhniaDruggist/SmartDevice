@@ -141,7 +141,7 @@
       padding-top: 37px;
       padding-left: 14px;
       padding-right: 16px;
-      padding-bottom: 20px;
+      padding-bottom: 24px;
     }
 
     &__item {
@@ -154,6 +154,20 @@
       margin-bottom: 6px;
       padding-left: 25px;
       font-size: 20px;
+
+      &--suppliers {
+        margin-top: 66px;
+      }
+
+      &--confidentiality {
+        margin-top: 59px;
+        margin-bottom: 13px;
+      }
+
+      &--personalization {
+        margin-top: 65px;
+        margin-bottom: 13px;
+      }
     }
 
     &__description {
@@ -163,6 +177,15 @@
 
       &--suppliers {
         padding-right: 12px;
+        padding-bottom: 26px;
+      }
+
+      &--confidentiality {
+        padding-bottom: 22px;
+      }
+
+      &--personalization {
+        padding-bottom: 20px;
       }
     }
   }

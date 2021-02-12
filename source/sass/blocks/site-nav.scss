@@ -36,6 +36,16 @@
     line-height: 25px;
     color: $text-footer;
     opacity: 0.5;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      color: $hover-light;
+    }
+
+    &:active {
+      color: $active-dark;
+    }
   }
 }
 
