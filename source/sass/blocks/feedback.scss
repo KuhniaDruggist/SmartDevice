@@ -1,13 +1,26 @@
 .feedback {
-  padding-bottom: 110px;
+  position: relative;
 
-  @include bg-img("../img/paper-airplane@1x.png");
-  background-position: calc(25% - 118px) 94px;
+  padding-bottom: 110px;
   background-color: $background-form;
 
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/paper-airplane@2x.png");
-    background-size: 665px auto;
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 94px;
+    right: 50%;
+
+    width: 765px;
+    height: 487px;
+
+    @include bg-img("../img/paper-airplane@1x.png");
+    background-position: right 100px top 0;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/paper-airplane@2x.png");
+      background-size: 665px auto;
+    }
   }
 
   &__wrapper {
@@ -43,6 +56,10 @@
   .feedback {
     padding-bottom: 103px;
     background-image: none;
+
+    &::before {
+      display: none;
+    }
 
     &__wrapper {
       padding-left: 25px;
