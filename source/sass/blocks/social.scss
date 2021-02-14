@@ -1,16 +1,24 @@
 .social {
   display: flex;
-  justify-content: space-between;
-  align-self: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 
   position: relative;
-  top: 55px;
+  top: 113px;
 
-  width: 112px;
+  max-width: 127px;
 
   @include pm-zero();
 
   list-style: none;
+
+  &__item {
+    margin-right: 15px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
 
   &__link svg {
     fill: $social-icon-fill;
@@ -37,6 +45,6 @@
 @media (max-width: $mobile-width) {
   .social {
     top: -80px;
-    right: 105px;
+    left: calc(50% - 56px);
   }
 }

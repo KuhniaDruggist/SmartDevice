@@ -18,9 +18,13 @@
     justify-content: space-between;
 
     @include pm-zero();
-    padding-bottom: 129px;
+    padding-bottom: 99px;
 
     list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 30px;
   }
 }
 
@@ -55,6 +59,13 @@
     padding-left: 15px;
     padding-right: 15px;
 
+    &__list {
+      flex-direction: row;
+
+      max-width: 609px;
+      margin: 0 auto;
+    }
+
     &__title {
       max-width: 100%;
       margin-top: 48px;
@@ -68,5 +79,12 @@
     &__item {
       margin-bottom: 29px;
     }
+  }
+}
+
+@media (max-width: $only-mobile) {
+  .product__item {
+    margin-right: auto;
+    margin-left: auto;
   }
 }

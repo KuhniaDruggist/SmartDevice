@@ -118,7 +118,7 @@
   .form {
     &__list {
       max-width: 590px;
-      margin-left: 67px;
+      margin: 0 auto;
     }
 
     &__field-info {
@@ -129,14 +129,14 @@
 
     &__wrapper {
       max-width: 590px;
-      margin-left: 67px;
+      margin-left: 2px;
     }
 
     &__item-consent {
       max-width: 238px;
       margin-top: 10px;
+      margin-right: -2px;
       margin-bottom: 6px;
-      margin-left: 20px;
     }
 
     &__button {

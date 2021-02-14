@@ -79,12 +79,19 @@
 
       font-size: 20px;
       line-height: 30px;
+
+      &--accessories {
+        top: 52px;
+        left: 45px;
+      }
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .item {
+    width: 290px;
+
     &__title {
       top: 20px;
       left: 34px;

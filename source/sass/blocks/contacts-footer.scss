@@ -1,4 +1,6 @@
 .contacts-footer {
+  max-width: 25%;
+
   &__title {
     @include pm-zero();
     margin-top: 8px;
@@ -49,6 +51,7 @@
 
 @media (max-width: $table-width) {
   .contacts-footer {
+    max-width: 100%;
     margin-top: 69px;
     margin-right: 12px;
   }

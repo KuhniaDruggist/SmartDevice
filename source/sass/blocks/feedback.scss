@@ -62,12 +62,14 @@
     }
 
     &__wrapper {
+      max-width: 590px;
+      margin: 0 auto;
       padding-left: 25px;
       padding-right: 25px;
     }
 
     &__title {
-      margin-left: 63px;
+      margin-left: -2px;
       padding-top: 80px;
       font-size: 32px;
       line-height: 45px;
@@ -76,7 +78,7 @@
     &__description {
       margin-top: 16px;
       margin-bottom: 55px;
-      margin-left: 68px;
+      margin-left: 2px;
     }
   }
 }
@@ -86,6 +88,7 @@
     padding-bottom: 36px;
 
     &__wrapper {
+      max-width: 100%;
       padding-left: 15px;
       padding-right: 15px;
     }

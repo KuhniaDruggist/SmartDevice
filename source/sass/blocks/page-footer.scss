@@ -19,12 +19,14 @@
 
   &__logo {
     position: relative;
-    top: 67px;
+    top: 66px;
+    left: -3px;
   }
 
   &__content-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 
     margin-bottom: 58px;
   }
@@ -55,6 +57,7 @@
 
     &__logo {
       top: 19px;
+      left: 0;
     }
 
     &__content-wrapper {
@@ -82,7 +85,7 @@
 
     &__logo {
       top: 46px;
-      left: 52px;
+      left: calc(50% - 108px);
     }
 
     &__content-wrapper {
