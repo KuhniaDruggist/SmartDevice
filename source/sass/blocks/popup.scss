@@ -1,7 +1,7 @@
 .popup {
   display: none;
 
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
@@ -13,13 +13,16 @@
 
   &__wrapper {
     position: relative;
-    top: 135px;
-    left: calc(50% - 245px);
 
     box-sizing: border-box;
     max-width: 490px;
+    margin-top: 135px;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
     padding-left: 40px;
     padding-right: 40px;
+
     background-color: $background-form;
   }
 
@@ -37,6 +40,15 @@
 
     border: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #5cceff;
+    }
+
+    &:active {
+      background-color: #0094d4;
+    }
   }
 
   &__title {
@@ -61,5 +73,7 @@
 
   &--open {
     display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }

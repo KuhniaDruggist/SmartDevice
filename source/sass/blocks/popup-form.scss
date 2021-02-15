@@ -78,6 +78,11 @@
     background-position: 2px;
   }
 
+  &__field-consent:hover ~ &__label-consent,
+  &__field-consent:focus ~ &__label-consent {
+    text-decoration: underline;
+  }
+
   &__button {
     margin-top: -5px;
     margin-bottom: 35px;
@@ -85,5 +90,16 @@
     @include button(100%);
 
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $hover-light;
+      border-color: $hover-light;
+    }
+
+    &:active {
+      background-color: $active-dark;
+      box-shadow: inset 0 0 3px $active-shadow;
+    }
   }
 }
