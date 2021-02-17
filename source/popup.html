@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart Device - Заказ звонка</title>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/pt-mono/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page-body">
+  <template style="display: none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </template>
+
+  <header class="page-header page-header--popup">
+    <div class="page-header__wrapper page-header--popup__wrapper">
+      <a class="page-header__logo page-header--popup__logo" href="index.html">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/icon-logo-mobile.svg">
+          <img src="img/icon-logo-desktop.svg" width="202" height="52" alt="Логотип компании Smart Device">
+        </picture>
+      </a>
+
+      <ul class="page-header__contacts contacts contacts--popup">
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--mail" href="mailto:info@sd.ru">
+            <svg class="contacts__icon contacts__icon--mail" width="19" height="14">
+              <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+            </svg>
+            <span class="contacts__name">info@sd.ru</span>
+          </a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--phone" href="tel:+74950005252">
+            <svg class="contacts__icon contacts__icon--phone" width="18" height="18">
+              <use xlink:href="img/sprite_auto.svg#icon-phone-call"></use>
+            </svg>
+            <span class="contacts__name">+7 (495) 000 52 52</span>
+          </a>
+        </li>
+      </ul>
+
+      <a class="button page-header__button-callback page-header--popup__button-callback" href="popup.html">Заказать звонок</a>
+    </div>
+  </header>
+
+  <main class="popup popup--page">
+    <div class="popup__wrapper popup--page__wrapper">
+      <button class="button popup__button popup--page__button"><span class="visually-hidden">Закрыть</span></button>
+      <h2 class="popup__title">Закажите звонок</h2>
+      <p class="popup__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+
+      <form class="popup__form popup-form" action="https://echo.htmlacademy.ru" method="post">
+        <ul class="popup-form__list">
+          <li class="popup-form__item-info">
+            <label class="popup-form__label-info visually-hidden" for="name-field">Имя</label>
+            <input class="popup-form__field-info" id="popup-name-field" type="text" name="name" placeholder="Имя" required>
+          </li>
+          <li class="popup-form__item-info">
+            <label class="popup-form__label-info visually-hidden" for="phone-field">Телефон</label>
+            <input class="popup-form__field-info" id="popup-phone-field" type="tel" name="phone" placeholder="Телефон" required>
+          </li>
+          <li class="popup-form__item-info">
+            <label class="popup-form__label-info visually-hidden" for="question-field">Ваш вопрос</label>
+            <textarea class="popup-form__field-info popup-form__field-info--question" id="popup-question-field" name="question" placeholder="Ваш вопрос"></textarea>
+          </li>
+        </ul>
+
+        <div class="popup-form__wrapper">
+
+          <p class="popup-form__item-consent">
+            <input class="popup-form__field-consent visually-hidden" type="checkbox" name="personal consent to processing" id="consent-popup" required>
+            <label class="popup-form__label-consent" for="consent-popup">Я согласен на обработку персональных данных</label>
+          </p>
+
+          <button class="button popup-form__button" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__main-wrapper">
+      <a class="page-footer__logo">
+        <img src="img/icon-logo-footer.svg" width="216" height="52" alt="Логотип компании Service Device">
+      </a>
+
+      <div class="page-footer__content-wrapper">
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">
+              <svg class="social__icon social__icon--facebook" width="27" height="27">
+                <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+              </svg>
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--ok" href="#">
+              <svg class="social__icon social__icon--ok" width="27" height="27">
+                <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+              </svg>
+              <span class="visually-hidden">Мы в Одноклассниках</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#">
+              <svg class="social__icon social__icon--vk" width="27" height="27">
+                <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+              </svg>
+              <span class="visually-hidden">Мы во Вконтакте</span>
+            </a>
+          </li>
+        </ul>
+
+        <nav class="page-footer__nav site-nav">
+          <button class="site-nav__button-toggle"><span class="visually-hidden">Показать разделы сыйта</span></button>
+          <h2 class="site-nav__title">Разделы сайта</h2>
+          <div class="site-nav__wrapper">
+            <ul class="site-nav__list-column site-nav__list-column--one">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">О компании</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Продукты</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Производство печатных плат</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Монтаж печатных плат</a>
+              </li>
+            </ul>
+            <ul class="site-nav__list-column site-nav__list-column--two">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Комплектующие</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Доставка</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="page-footer__contacts contacts-footer">
+          <button class="contacts-footer__button-toggle"><span class="visually-hidden">Показать разделы сыйта</span></button>
+          <h2 class="contacts-footer__title">Наш офис</h2>
+          <div class="contacts-footer__wrapper">
+          <p class="contacts-footer__adres">г. Мытищи, Олимпийский проспект, д.10</p>
+            <ul class="contacts-footer__phones">
+              <li class="contacts-footer__phones-item">
+                <a class="contacts-footer__phones-link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+              </li>
+              <li class="contacts-footer__phones-item">
+                <a class="contacts-footer__phones-link" href="tel:+79250038767">+7 (925) 003-87-67</a>
+              </li>
+              <li class="contacts-footer__phones-item">
+                <a class="contacts-footer__phones-link" href="tel:+792692608079">+7 (926) 926-080-79</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__item copyright__item--first">Все права защищены</p>
+        <p class="copyright__item copyright__item--second">1999-2018 SD Service Devices</p>
+        <p class="copyright__item copyright__item--third">
+          <a class="copyright__link" href="#">Условия конфиденциальности</a>
+        </p>
+        <p class="copyright__item copyright__item--last">Developed by wow studio</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
