@@ -6,10 +6,11 @@ var pageBody = document.querySelector('.page-body');
 
 var popup = document.querySelector('.popup');
 var popupButton = popup.querySelector('.popup__button');
-var form = popup.querySelector('form');
-var firstName = popup.querySelector('[name=name]');
-var phone = popup.querySelector('[name=phone]');
-var question = popup.querySelector('[name=question]');
+
+var forms = document.querySelectorAll('form');
+var inputsFirstName = document.querySelectorAll('[name=name]');
+var inputsPhone = document.querySelectorAll('[name=phone]');
+var inputsQuestion = document.querySelectorAll('[name=question]');
 
 var isStorageSupport = true;
 var storage = {
@@ -32,19 +33,33 @@ headerButton.addEventListener('click', function (evt) {
   pageBody.classList.add('page-body__popup-open');
 
   if (storage.name) {
-    firstName.value = storage.name;
-    phone.focus();
+    inputsFirstName.forEach(function (item) {
+      item.value = storage.name;
+      return;
+    });
+    inputsPhone.forEach(function (item) {
+      item.focus();
+      return;
+    });
   } else {
-    firstName.focus();
+    inputsFirstName.forEach(function (item) {
+      item.focus();
+      return;
+    });
   }
 });
 
-form.addEventListener('submit', function () {
-  if (isStorageSupport) {
-    localStorage.setItem('firstName', firstName.value);
-    localStorage.setItem('phone', phone.value);
-    localStorage.setItem('question', question.value);
-  }
+forms.forEach(function (item, i) {
+  item.addEventListener('submit', function (evt) {
+    if (isStorageSupport) {
+      localStorage.setItem('firstName', inputsFirstName[i].value);
+      localStorage.setItem('phone', inputsPhone[i].value);
+      localStorage.setItem('question', inputsQuestion[i].value);
+    }
+    if (inputsPhone[i].value.length !== 17) {
+      evt.preventDefault();
+    }
+  });
 });
 
 popupButton.addEventListener('click', function (evt) {
@@ -108,9 +123,7 @@ contactsToggle.addEventListener('click', function () {
   }
 });
 
-var phoneInput = document.querySelectorAll('input[type="tel"]');
-
-phoneInput.forEach(function (input) {
+inputsPhone.forEach(function (input) {
   input.addEventListener('keypress', function (evt) {
     if (evt.keyCode < 47 || evt.keyCode > 57) {
       evt.preventDefault();
