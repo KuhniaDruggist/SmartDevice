@@ -76,4 +76,18 @@
     overflow-y: auto;
     overflow-x: hidden;
   }
+
+  &--page {
+    display: block;
+    position: static;
+    background-color: $background-form;
+
+    &__wrapper {
+      margin-top: 0;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
 }

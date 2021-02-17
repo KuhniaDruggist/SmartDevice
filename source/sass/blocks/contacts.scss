@@ -58,6 +58,10 @@
     width: 18px;
     height: 18px;
   }
+
+  &--popup {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: $table-width) {
