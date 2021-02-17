@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Smart Device - умные технологии</title>
+  <title>Smart Device - Заказ звонка</title>
   <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/pt-mono/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
@@ -109,16 +109,16 @@
 </symbol></svg>
   </template>
 
-  <header class="page-header">
-    <div class="page-header__wrapper">
-      <a class="page-header__logo">
+  <header class="page-header page-header--popup">
+    <div class="page-header__wrapper page-header--popup__wrapper">
+      <a class="page-header__logo page-header--popup__logo" href="index.html">
         <picture>
           <source media="(max-width: 767px)" srcset="img/icon-logo-mobile.svg">
           <img src="img/icon-logo-desktop.svg" width="202" height="52" alt="Логотип компании Smart Device">
         </picture>
       </a>
 
-      <ul class="page-header__contacts contacts">
+      <ul class="page-header__contacts contacts contacts--popup">
         <li class="contacts__item">
           <a class="contacts__link contacts__link--mail" href="mailto:info@sd.ru">
             <svg class="contacts__icon contacts__icon--mail" width="19" height="14">
@@ -137,164 +137,43 @@
         </li>
       </ul>
 
-      <a class="button page-header__button-callback" href="popup.html" target="_blank">Заказать звонок</a>
+      <a class="button page-header__button-callback page-header--popup__button-callback" href="popup.html">Заказать звонок</a>
     </div>
   </header>
 
-  <main class="page-main">
-    <div class="page-main__wrapper">
-      <h1 class="page-main__title">Печатные платы</h1>
-      <p class="page-main__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-      <a class="button page-main__button-link" href="#feedback">
-        <span class="page-main__toggle-text">Получить бесплатную консультацию</span>
-      </a>
-      <a class="page-main__scroll" href="#advantages">Скролл вниз</a>
-    </div>
+  <main class="popup popup--page">
+    <div class="popup__wrapper popup--page__wrapper">
+      <button class="button popup__button popup--page__button"><span class="visually-hidden">Закрыть</span></button>
+      <h2 class="popup__title">Закажите звонок</h2>
+      <p class="popup__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
 
-    <div class="page-main__background-wrapper">
-      <section class="advantages" id="advantages">
-        <h2 class="advantages__title visually-hidden">Преимущества нашей компании</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <svg class="advantages__icon advantages__icon--watch" width="29" height="35">
-              <use xlink:href="img/sprite_auto.svg#icon-stopwatch"></use>
-            </svg>
-            <h3 class="advantages__name">Оперативные сроки</h3>
-            <p class="advantages__description">
-              Усовершенствованная логистическая
-              система позволяет нам просчитывать стоимость, производить
-              и доставлять заказы плат и комплектующих в самые короткие сроки.
-            </p>
+      <form class="popup__form popup-form" action="https://echo.htmlacademy.ru" method="post">
+        <ul class="popup-form__list">
+          <li class="popup-form__item-info">
+            <label class="popup-form__label-info visually-hidden" for="name-field">Имя</label>
+            <input class="popup-form__field-info" id="popup-name-field" type="text" name="name" placeholder="Имя" required="">
           </li>
-          <li class="advantages__item">
-            <svg class="advantages__icon advantages__icon--hired" width="35" height="35">
-              <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
-            </svg>
-            <h3 class="advantages__name advantages__name--suppliers">Крупные поставщики</h3>
-            <p class="advantages__description advantages__description--suppliers">
-              Нашими поставщиками являются такие крупные мировые компании
-              как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с
-              такими компаниями обеспичивает хорошее качество нашей продукции.
-            </p>
+          <li class="popup-form__item-info">
+            <label class="popup-form__label-info visually-hidden" for="phone-field">Телефон</label>
+            <input class="popup-form__field-info" id="popup-phone-field" type="tel" name="phone" placeholder="Телефон" required="">
           </li>
-          <li class="advantages__item">
-            <svg class="advantages__icon advantages__icon--detective" width="36" height="31">
-              <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
-            </svg>
-            <h3 class="advantages__name advantages__name--confidentiality">Полная конфиденциальность</h3>
-            <p class="advantages__description advantages__description--confidentiality">
-              По желанию клиента  мы обеспечиваем полную конфеденциальность.
-            </p>
-          </li>
-          <li class="advantages__item">
-            <svg class="advantages__icon advantages__icon--tag" width="35" height="35">
-              <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
-            </svg>
-            <h3 class="advantages__name advantages__name--personalization">Персонализация стоимости</h3>
-            <p class="advantages__description advantages__description--personalization">
-              Мы  подбираем определенную фабрику, поставщиков, вид доставки,
-              чтобы установить ту цену, которая Вас устраивает.
-            </p>
+          <li class="popup-form__item-info">
+            <label class="popup-form__label-info visually-hidden" for="question-field">Ваш вопрос</label>
+            <textarea class="popup-form__field-info popup-form__field-info--question" id="popup-question-field" name="question" placeholder="Ваш вопрос"></textarea>
           </li>
         </ul>
-      </section>
 
-      <section class="ab-company">
-        <div class="ab-company__wrapper">
-          <h2 class="ab-company__title">О компании</h2>
-          <p class="ab-company__description">Мы поставляем электронные комплектующие,
-            производим печатные платы и предоставляем мировые технологии с 1997 года.
-            Выполняем срочные заказы и пилотные образцы до 10 дней.
+        <div class="popup-form__wrapper">
+
+          <p class="popup-form__item-consent">
+            <input class="popup-form__field-consent visually-hidden" type="checkbox" name="personal consent to processing" id="consent-popup" required="">
+            <label class="popup-form__label-consent" for="consent-popup">Я согласен на обработку персональных данных</label>
           </p>
-          <p class="ab-company__description">
-            <span class="ab-company__visible">Наши поставщики - мировые производители
-            электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-            Печатные платы и комплектующие Service Devices применяются на предприятиях
-            Российских Железных Дорог</span> <span class="ab-company__hidden">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
-            Среди наших клиентов крупнейшие Производители светотехники России.</span>
-          </p>
-          <a class="button ab-company__button" href="#">Подробнее</a>
+
+          <button class="button popup-form__button" type="submit">Отправить</button>
         </div>
-      </section>
+      </form>
     </div>
-
-    <section class="product">
-      <h2 class="product__title">Service Device предлагает следующие товары и услуги</h2>
-      <ul class="product__list">
-        <li class="product__item item">
-          <a class="item__link" href="#">
-            <h3 class="item__title">Производство печатных плат</h3>
-            <picture class="item__image-box">
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/product-one-mobile@1x.webp, img/product-one-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-one-tablet@1x.webp, img/product-one-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/product-one-desktop@1x.webp, img/product-one-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="img/product-one-mobile@1x.jpg, img/product-one-mobile@2x.jpg 2x">
-              <source media="(max-width: 1023px)" srcset="img/product-one-tablet@1x.jpg, img/product-one-tablet@2x.jpg 2x">
-              <img class="item__image" src="img/product-one-desktop@1x.jpg" srcset="img/product-one-desktop@2x.jpg 2x" width="370" height="620" alt="Фотография процесса производства печатных плат">
-            </picture>
-          </a>
-        </li>
-        <li class="product__item item">
-          <a class="item__link" href="#">
-            <h3 class="item__title">Монтаж печатных плат</h3>
-            <picture class="item__image-box">
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/product-two-mobile@1x.webp, img/product-two-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-two-tablet@1x.webp, img/product-two-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/product-two-desktop@1x.webp, img/product-two-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="img/product-two-mobile@1x.jpg, img/product-two-mobile@2x.jpg 2x">
-              <source media="(max-width: 1023px)" srcset="img/product-two-tablet@1x.jpg, img/product-two-tablet@2x.jpg 2x">
-              <img class="item__image" src="img/product-two-desktop@1x.jpg" srcset="img/product-two-desktop@2x.jpg 2x" width="370" height="620" alt="Фотография процесса монтажа печатных плат">
-            </picture>
-          </a>
-        </li>
-        <li class="product__item item">
-          <a class="item__link" href="#">
-            <h3 class="item__title item__title--accessories">Комплектующие для светотехники</h3>
-            <picture class="item__image-box">
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/product-three-mobile@1x.webp, img/product-three-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-three-tablet@1x.webp, img/product-three-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/product-three-desktop@1x.webp, img/product-three-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="img/product-three-mobile@1x.jpg, img/product-three-mobile@2x.jpg 2x">
-              <source media="(max-width: 1023px)" srcset="img/product-three-tablet@1x.jpg, img/product-three-tablet@2x.jpg 2x">
-              <img class="item__image" src="img/product-three-desktop@1x.jpg" srcset="img/product-three-desktop@2x.jpg 2x" width="370" height="620" alt="Фотография светодиодной ленты">
-            </picture>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="feedback" id="feedback">
-      <div class="feedback__wrapper">
-        <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
-        <p class="feedback__description">Мы проконсультируем Вас бесплатно</p>
-
-        <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
-          <ul class="form__list">
-            <li class="form__item-info">
-              <label class="form__label-info visually-hidden" for="name-field">Имя</label>
-              <input class="form__field-info" id="name-field" type="text" name="name" placeholder="Имя" required="">
-            </li>
-            <li class="form__item-info">
-              <label class="form__label-info visually-hidden" for="phone-field">Телефон</label>
-              <input class="form__field-info" id="phone-field" type="tel" name="phone" placeholder="Телефон" required="">
-            </li>
-            <li class="form__item-info">
-              <label class="form__label-info visually-hidden" for="question-field">Ваш вопрос</label>
-              <textarea class="form__field-info form__field-info--question" id="question-field" placeholder="Ваш вопрос"></textarea>
-            </li>
-          </ul>
-
-          <div class="form__wrapper">
-            <p class="form__item-consent">
-              <input class="form__field-consent visually-hidden" type="checkbox" name="personal consent to processing" id="consent" required="">
-              <label class="form__label-consent" for="consent">Я согласен на обработку персональных данных</label>
-            </p>
-
-            <button class="button form__button" type="submit">Задать вопрос</button>
-          </div>
-        </form>
-      </div>
-    </section>
   </main>
 
   <footer class="page-footer">
@@ -393,44 +272,6 @@
       </div>
     </div>
   </footer>
-
-  <!--ПОПАП-->
-
-  <section class="popup">
-    <div class="popup__wrapper">
-      <button class="button popup__button"><span class="visually-hidden">Закрыть</span></button>
-      <h2 class="popup__title">Закажите звонок</h2>
-      <p class="popup__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-
-      <form class="popup__form popup-form" action="https://echo.htmlacademy.ru" method="post">
-        <ul class="popup-form__list">
-          <li class="popup-form__item-info">
-            <label class="popup-form__label-info visually-hidden" for="name-field">Имя</label>
-            <input class="popup-form__field-info" id="popup-name-field" type="text" name="name" placeholder="Имя" required="">
-          </li>
-          <li class="popup-form__item-info">
-            <label class="popup-form__label-info visually-hidden" for="phone-field">Телефон</label>
-            <input class="popup-form__field-info" id="popup-phone-field" type="tel" name="phone" placeholder="Телефон" required="">
-          </li>
-          <li class="popup-form__item-info">
-            <label class="popup-form__label-info visually-hidden" for="question-field">Ваш вопрос</label>
-            <textarea class="popup-form__field-info popup-form__field-info--question" id="popup-question-field" name="question" placeholder="Ваш вопрос"></textarea>
-          </li>
-        </ul>
-
-        <div class="popup-form__wrapper">
-
-          <p class="popup-form__item-consent">
-            <input class="popup-form__field-consent visually-hidden" type="checkbox" name="personal consent to processing" id="consent-popup" required="">
-            <label class="popup-form__label-consent" for="consent-popup">Я согласен на обработку персональных данных</label>
-          </p>
-
-          <button class="button popup-form__button" type="submit">Отправить</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
   <script src="js/script.js"></script>
 </body>
 </html>
